@@ -1,1 +1,1 @@
-# python_fun
+# Misc projects in Python
