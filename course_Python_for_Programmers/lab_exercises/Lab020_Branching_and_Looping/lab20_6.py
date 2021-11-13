@@ -1,13 +1,22 @@
 #!/usr/bin/env python3
 """
 6. (Optional) Print the decimal equivalent of a binary string.
-
-Testwith"1011". Binary string: 1011
+Test with "1011". Binary string: 1011
 Decimal equivalent: 11
 
-You will find the int builtin function very useful.
-At the interpreter’s prompt, type:
+int builtin is useful or use a for or while loop.
 >>> help(int)
-Only read a few lines until you discover the Pythonic way to do this exercise.
-And/or try it using a for-loop and a while-loop.
 """
+binary_string = '1011'
+sum = 0
+
+for index, char in enumerate(reversed(binary_string)):
+    if char not in '01':
+        print(f"{binary_string} is not a binary string.")
+        break
+    else:
+        digit = int(char) * (2 ** index)
+        sum += digit
+        if index == (len(binary_string) - 1):
+            print(
+                f"The binary string '{binary_string}' decimal equivalent is {sum}.")
