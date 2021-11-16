@@ -1,22 +1,32 @@
 #!/usr/bin/env python3
+"""lab20_6.py
+Prints the decimal equivalent of a binary string.
+Test with binary string: "1011". Decimal equivalent: 11
 """
-6. (Optional) Print the decimal equivalent of a binary string.
-Test with "1011". Binary string: 1011
-Decimal equivalent: 11
 
-int builtin is useful or use a for or while loop.
->>> help(int)
-"""
-binary_string = '1011'
-sum = 0
 
-for index, char in enumerate(reversed(binary_string)):
-    if char not in '01':
-        print(f"{binary_string} is not a binary string.")
-        break
+def ConvertBinaryToDecimal(binary):
+    for char in binary:
+        if char not in '01':
+            print(f"{binary} is not a binary string.")
+            break
     else:
-        digit = int(char) * (2 ** index)
-        sum += digit
-        if index == (len(binary_string) - 1):
-            print(
-                f"The binary string '{binary_string}' decimal equivalent is {sum}.")
+        decimal = 0
+        for position_weight in range(len(binary)):
+            digit = GetReversedBinaryDigit(binary, position_weight)
+            decimal += digit * (2 ** position_weight)
+        print(
+            f"The binary string '{binary}' decimal equivalent is {decimal}.")
+
+
+def GetReversedBinaryDigit(binary, position_weight):
+    string_reversed = binary[::-1]
+    digit = int(string_reversed[position_weight])
+    return digit
+
+
+def main():
+    ConvertBinaryToDecimal("1011")
+
+
+main()
