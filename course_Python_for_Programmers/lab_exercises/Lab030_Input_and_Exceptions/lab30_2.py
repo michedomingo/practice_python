@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
-"""
-2. (Optional) Write a program that asks the user to think of a number between 1 and 10.
-The program then tries to guess the number and asks the user if the computer’s guess
-is right. If the guess is not right, ask the user if the guess is high or low and then take
-another guess. When the guess is correct, report how many guesses it took to get the
-right number.
+"""lab30_2.py
+Asks user to think of a number between 1 and 10. Program asks user if the computer’s guess is correct.
+If incorrect, asks user if the guess is higher/lower then displays another guess.
+Reports how many guesses it took to get the correct number.
 """
 count = 0
 num = 5
@@ -37,4 +35,4 @@ while True:
     else:
         print("Please try again.", end=' ')
 
-print(f"Hurray! Only {count} guess(es).")
+print(f"Hurray! Only {count} {'guess' if count==1 else 'guesses'}.")
