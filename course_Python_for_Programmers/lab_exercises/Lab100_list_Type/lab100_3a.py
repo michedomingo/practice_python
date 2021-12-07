@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""lab100_3.py
+"""lab100_3a.py
 3. Write a function that takes in any number of colors. 
 It finds the first two primary colors given and returns the result of mixing them together. 
 If there are not two primary colors, the result should be "grey".

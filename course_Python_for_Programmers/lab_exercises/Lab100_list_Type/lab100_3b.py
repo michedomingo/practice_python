@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""
+"""lab100_3b.py
 Defines MixColors() which takes in any number of colors and mixes
 together the first two primary colors.
 """
