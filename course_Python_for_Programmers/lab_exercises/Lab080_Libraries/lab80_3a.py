@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""lab80_3.py
+"""lab80_3a.py
 3. Modify lab80_1.py by adding a function called GetHeads(target) that uses FlipCoin().
 This new function accepts an integer as the only argument, target, and
 then flips coins until it gets target heads in a row.
