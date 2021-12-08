@@ -13,7 +13,7 @@ def CountVowels(words):
     """
     count = 0
     for word in words:
-        for char in word:
+        for char in word.lower():
             if char in "aeiou":
                 count += 1
     return count
