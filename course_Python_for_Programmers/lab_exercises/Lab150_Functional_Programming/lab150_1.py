@@ -8,7 +8,7 @@ sorted and formatted four across columns.
 def PrintColors(colors):
     for index, color in enumerate(sorted(colors)):
         # print(index, color)
-        print(f"{color:>15}", end=" ")
+        print(f"{color:>15}", end=' ')
         if index % 4 == 3:
             print()
 
